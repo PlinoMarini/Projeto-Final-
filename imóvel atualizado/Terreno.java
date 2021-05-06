@@ -6,7 +6,7 @@ public class Terreno extends Imovel {
 	
 	 
 	public Terreno(String id, byte status, String alug_venda, double valor_aluguel, double valor_venda,
-			String data_anuncio, String data_construcao, double area, Endereço end, double largura, double comprimento,
+			String data_anuncio, String data_construcao, double area, Endereco end, double largura, double comprimento,
 			String aclive_declive) 
 	{
 		super(id, status, alug_venda, valor_aluguel, valor_venda, data_anuncio, data_construcao, area, end);
@@ -15,7 +15,7 @@ public class Terreno extends Imovel {
 		setAclive_declive(aclive_declive);
 		this.alug_venda = "venda"; 
 		this.valor_aluguel = 0.0;
-		this.data_construcao = "Terreno sem construção"; 
+		this.data_construcao = "Terreno sem construcao"; 
 	} // ------------ Construtor ------------//
 	
 	/**

@@ -9,11 +9,11 @@ public class Imovel {
 	private String data_anuncio; 
 	protected String data_construcao;
 	private double area; 
-	private Endereço end; 
+	private Endereco end; 
 	
 	public Imovel(String id,  byte status, String alug_venda, 
 					double valor_aluguel, double valor_venda, 
-					String data_anuncio,String data_construcao, double area, Endereço end) 
+					String data_anuncio,String data_construcao, double area, Endereco end) 
 	{
 		setStatus(status);
 		setAlug_venda(alug_venda); 
@@ -53,10 +53,10 @@ public class Imovel {
 	}
 
 	/**
-	 * @param status é iniciado apenas se os valores inseridos forem 1,2 ou 3. 
-	 * 1 = status Ativo(o imóvel está disponível para venda ou locação)
-	 * 2 = status Inativo(o imóvel foi retirado)
-	 * 3 = status em Uso (o imóvel foi vendido ou alugado)
+	 * @param status ï¿½ iniciado apenas se os valores inseridos forem 1,2 ou 3. 
+	 * 1 = status Ativo(o imï¿½vel estï¿½ disponï¿½vel para venda ou locaï¿½ï¿½o)
+	 * 2 = status Inativo(o imï¿½vel foi retirado)
+	 * 3 = status em Uso (o imï¿½vel foi vendido ou alugado)
 	 */
 	public boolean setStatus(byte status) {
 		if(status == 1 || status == 2 || status == 3) {
@@ -76,7 +76,7 @@ public class Imovel {
 
 	/**
 	 * @param alug_venda apenas retorna true se os valores iniciados forem "aluguel" ou "venda".
-	 * Caso contrário, retornará falso!
+	 * Caso contrï¿½rio, retornarï¿½ falso!
 	 */
 	public boolean setAlug_venda(String alug_venda) {
 		alug_venda.toLowerCase();
@@ -85,7 +85,7 @@ public class Imovel {
 			return true; 
 		}
 		else 
-			this.alug_venda = "Erro de digitação ou Imóvel desativado!"; 
+			this.alug_venda = "Erro de digitalizacao ou Imovel desativado!"; 
 			return false;
 	}
 
@@ -97,7 +97,7 @@ public class Imovel {
 	}
 
 	/**
-	 * @param valor_aluguel apenas recebe o valor se o status for diferente de inativo(3), se o imóvel for para alugar e se o valor for maior que 0
+	 * @param valor_aluguel apenas recebe o valor se o status for diferente de inativo(3), se o imï¿½vel for para alugar e se o valor for maior que 0
 	 */
 	public boolean setValor_aluguel(double valor_aluguel) {
 		if(valor_aluguel > 0 && status != 2 && alug_venda == "alug") {
@@ -117,7 +117,7 @@ public class Imovel {
 	}
 
 	/**
-	 * @param valor_venda apenas recebe o valor se o status for diferente de inativo(3), se o imóvel for destinado à venda e se o valor for maior que 0
+	 * @param valor_venda apenas recebe o valor se o status for diferente de inativo(3), se o imï¿½vel for destinado ï¿½ venda e se o valor for maior que 0
 	 */
 	public boolean setValor_venda(double valor_venda) {
 		if(valor_venda > 0 && status != 2 && alug_venda == "venda") {
@@ -158,7 +158,7 @@ public class Imovel {
 	 */
 	public void setData_anuncio(String data_anuncio) {
 		if(status != 2) this.data_anuncio = data_anuncio;
-		else this.data_anuncio = "Imóvel inativo!";
+		else this.data_anuncio = "Imovel inativo!";
 	}
 
 	/**
@@ -173,7 +173,7 @@ public class Imovel {
 	 */
 	public void setData_construcao(String data_construcao) {
 		if(status != 2) this.data_construcao = data_construcao;
-		else this.data_construcao = "Imóvel inativo!"; 
+		else this.data_construcao = "Imovel inativo!"; 
 	}
 
 	/**
@@ -196,14 +196,14 @@ public class Imovel {
 	/**
 	 * @return the end
 	 */
-	public Endereço getEnd() {
+	public Endereco getEnd() {
 		return end;
 	}
 
 	/**
 	 * @param end the end to set
 	 */
-	public void setEnd(Endereço end) {
+	public void setEnd(Endereco end) {
 		if(status != 2) this.end = end;
 		else this.end = null; 
 	}

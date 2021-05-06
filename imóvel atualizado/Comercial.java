@@ -8,7 +8,7 @@ public class Comercial extends Imovel {
 	
 	public Comercial(String id, byte status, String alug_venda, 
 			double valor_aluguel, double valor_venda, String data_anuncio, 
-			String data_construcao, double area, Endereço end, 
+			String data_construcao, double area, Endereco end, 
 			int comodos, int banheiros) 
 	{
 		super(id, status, alug_venda, valor_aluguel, valor_venda, data_anuncio, data_construcao, area, end);

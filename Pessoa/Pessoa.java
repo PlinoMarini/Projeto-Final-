@@ -37,9 +37,8 @@ public class Pessoa {
         return cpf;
     }
 
-    public void setCpf(String cpf) {
+    public boolean setCpf(String cpf) {
     	int d[] = new int[13];
-    	
     	
     	int j = 0;
 		// Converte todos os chars de CPF para inteiros no array d, cada posição sendo um dígito do CPF
@@ -52,9 +51,51 @@ public class Pessoa {
     		}
     	}
     	
+    	int l = 0;
     	
+    	j = 10;
+    	// Faz o calculo L = 10*d1 + 9*d2... 2*d9;
+    	for(int i = 1; i <= 9; i++, j--) {
+    		l += j*d[i];
+    	}
     	
+    	int resto = l % 11;
     	
+    	if(resto == 0 || resto == 1) {
+    		if(d[10] != 0) {
+    			return false; // não é um CPF válido
+    		}
+    	}
+    	else {
+    		if(d[10] != 11 - resto) {
+    			return false;
+    		}
+    	}
+    	// caso chegou até aqui, passou no teste do primeiro digito verificador
+    	
+    	// Agora, será feito o teste para o segundo dígito verificador
+    	
+    	j = 10;
+    	l = 0;
+    	
+    	// Faz o calculo L = 10*d2 + 9*d2... 2*d10;
+    	for(int i = 2; i <= 10; i++, j--) {
+    		l += j*d[i];
+    	}
+    	
+    	resto = l % 11;
+    	
+    	if(resto == 0 || resto == 1) {
+    		if(d[11] != 0) {
+    			return false; // não é um CPF válido
+    		}
+    	}
+    	else {
+    		if(d[11] != 11 - resto) {
+    			return false;
+    		}
+    	}
+    	return true;
     }
 
     public String getSexo() {

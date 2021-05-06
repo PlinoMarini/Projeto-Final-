@@ -13,7 +13,7 @@ public class Residencial extends Imovel {
 	
 	public Residencial(String id, byte status, String alug_venda, 
 			double valor_aluguel, double valor_venda, String data_anuncio, 
-			String data_construcao, double area, Endereço end, 
+			String data_construcao, double area, Endereco end, 
 			int quartos, int banheiros, int suite, int sala_estar, 
 			int sala_jantar, int vagas_garagem, int armarios, 
 			String descricao, char piscina) 

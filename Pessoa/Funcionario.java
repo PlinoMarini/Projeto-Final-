@@ -3,7 +3,7 @@ public class Funcionario extends Pessoa{
     private String data_ingresso; 
     private double salario_base;
 
-    public Funcionario (String nome, String cpf, String sexo, String email, int telefone, String data_ingresso, double salario_base){
+    public Funcionario (String nome, String cpf, String sexo, String email, String telefone, String data_ingresso, double salario_base){
     super(nome, cpf, sexo, email, telefone);
     setData_ingresso(data_ingresso); 
     setSalario_base(salario_base); 

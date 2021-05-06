@@ -4,9 +4,9 @@ public class Pessoa {
     private String cpf; 
     private String sexo; 
     private String email; 
-    private int telefone;
+    private String telefone;
 
-    public Pessoa(String nome, String cpf, String sexo, String email, int telefone) {
+    public Pessoa(String nome, String cpf, String sexo, String email, String telefone) {
        /* this.nome = nome;
         this.cpf = cpf;
         this.sexo = sexo;
@@ -29,7 +29,7 @@ public class Pessoa {
         if(nome.length() > 0)
             this.nome = nome;
         else
-            this.nome = 0;
+            this.nome = "";
     }
 
     //127.869.988-10
@@ -38,10 +38,23 @@ public class Pessoa {
     }
 
     public void setCpf(String cpf) {
-        if(cpf.length() < 14 || cpf.length() > 14)
-            this.cpf = 0;
-        else
-            this.cpf = cpf;
+    	int d[] = new int[13];
+    	
+    	
+    	int j = 0;
+		// Converte todos os chars de CPF para inteiros no array d, cada posição sendo um dígito do CPF
+    	for(int i = 1; (i < 13 &&  j  < 14); i++, j++) {
+    		if(cpf.charAt(j) >= 48 && cpf.charAt(j) <= 57) {
+    			d[i] = Character.getNumericValue(cpf.charAt(j));
+    		}
+    		else {
+    			i--;
+    		}
+    	}
+    	
+    	
+    	
+    	
     }
 
     public String getSexo() {
@@ -63,14 +76,14 @@ public class Pessoa {
         this.email = email;
     }
 
-    public int getTelefone() {
+    public String getTelefone() {
         return telefone;
     }
 
     //34988588461
-    public void setTelefone(int telefone) {
-        if(telefone < 11 || telefone > 11)
-            this.telefone = 0;
+    public void setTelefone(String telefone) {
+        if(telefone.length() < 11 || telefone.length() > 11)
+            this.telefone = "";
         else
             this.telefone = telefone; 
     }

@@ -1,12 +1,12 @@
 
-public class Endereço {
+public class Endereco {
 	private String rua; 
 	private String bairro; 
 	private String cidade; 
 	private int cep; 
 	private String complemento;
 	
-	public Endereço(String rua, String bairro, String cidade, int cep, String complemento) {
+	public Endereco(String rua, String bairro, String cidade, int cep, String complemento) {
 		setRua(rua); 
 		setBairro(bairro); 
 		setCidade(cidade); 

@@ -9,11 +9,11 @@ public class Imovel {
 	private String data_anuncio; 
 	protected String data_construcao;
 	private double area; 
-	private Endereço end; 
+	private Endereco end; 
 	
 	public Imovel(String id,  byte status, String alug_venda, 
 					double valor_aluguel, double valor_venda, 
-					String data_anuncio,String data_construcao, double area, Endereço end) 
+					String data_anuncio,String data_construcao, double area, Endereco end) 
 	{
 		setStatus(status);
 		setAlug_venda(alug_venda); 
@@ -196,14 +196,14 @@ public class Imovel {
 	/**
 	 * @return the end
 	 */
-	public Endereço getEnd() {
+	public Endereco getEnd() {
 		return end;
 	}
 
 	/**
 	 * @param end the end to set
 	 */
-	public void setEnd(Endereço end) {
+	public void setEnd(Endereco end) {
 		if(status != 2) this.end = end;
 		else this.end = null; 
 	}

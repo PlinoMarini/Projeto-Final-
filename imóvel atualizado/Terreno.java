@@ -10,13 +10,12 @@ public class Terreno extends Imovel {
 			String aclive_declive) 
 	{
 		super(id, status, alug_venda, valor_aluguel, valor_venda, data_anuncio, data_construcao, area, end);
-		
 		setLargura(largura);
 		setComprimento(comprimento);
 		setAclive_declive(aclive_declive);
 		this.alug_venda = "venda"; 
 		this.valor_aluguel = 0.0;
-		this.data_construcao = "Terreno sem constru��o"; 
+		this.data_construcao = "Terreno sem construcao"; 
 	} // ------------ Construtor ------------//
 	
 	/**
@@ -58,7 +57,17 @@ public class Terreno extends Imovel {
 		this.aclive_declive = aclive_declive;
 	} 
 	
+	public void setAlug_vend(String alug_venda) {
+		this.alug_venda = "venda"; 
+	}
 	
+	public void setData_construcao(String data_construcao) {
+		this.data_construcao = "Apenas Terreno!"; 
+	}
 	
+	public boolean setValor_aluguel(double valor_aluguel) {
+		this.valor_aluguel = 0.0; 
+		return false; 
+	}
 	
 }// --------- end Terreno ----------// 

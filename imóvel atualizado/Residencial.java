@@ -160,7 +160,7 @@ public class Residencial extends Imovel {
 	 */
 	public void setDescricao(String descricao) {
 		if(status != 2) this.descricao = descricao;
-		else this.descricao = "Imóvel desativado!"; 
+		else this.descricao = "Imovel desativado!"; 
 	}
 
 	/**

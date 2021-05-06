@@ -20,7 +20,7 @@ public class Endereco {
 
 	public void setRua(String rua) {
 		if(rua.length() <= 0)
-			this.rua = "Rua inválida!";
+			this.rua = "Rua invalida!";
 		else
 			this.rua = rua; 
 	}
@@ -33,7 +33,7 @@ public class Endereco {
 		if(bairro.length() > 0)
 			this.bairro = bairro;
 		else 
-			this.bairro = "Bairro inválido!"; 
+			this.bairro = "Bairro invalido!"; 
 	}
 
 	public String getCidade() {
@@ -44,7 +44,7 @@ public class Endereco {
 		if(cidade.length() > 0)
 			this.cidade = cidade;
 		else
-			this.cidade = "Cidade inválida!"; 
+			this.cidade = "Cidade invalida!"; 
 	}
 
 	public int getCep() {
@@ -64,10 +64,10 @@ public class Endereco {
 
 	public void setComplemento(String complemento) {
 		if(complemento.length() < 0)
-			this.complemento = "Complemento inválido!";
+			this.complemento = "Complemento invalido!";
 		else 
 			this.complemento = complemento; 
 	}
 	
 	
-}//------------- end Endereço ---------------//
+}//------------- end Endereï¿½o ---------------//

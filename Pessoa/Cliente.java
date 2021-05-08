@@ -10,8 +10,6 @@ public class Cliente extends Pessoa {
 		setEstadoCivil(estadoCivil);
 		setProfissao(profissao);
 	}
-
-	
 	
 	@Override
 	public String toString() {
@@ -25,6 +23,7 @@ public class Cliente extends Pessoa {
 	}
 
 	public boolean setEstadoCivil(char estadoCivil) {
+		// Verifica se o estado civil é um caracter ascii correspondente a uma letra
 		if((estadoCivil >= 65 && estadoCivil <= 90) || (estadoCivil >= 97 && estadoCivil <= 122)) {
 			this.estadoCivil = estadoCivil;
 			return true;

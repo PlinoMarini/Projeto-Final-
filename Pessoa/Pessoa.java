@@ -116,7 +116,7 @@ public class Pessoa {
     }
 
     public void setSexo(String sexo) {
-        if(sexo == "m" || sexo == "f")
+        if(sexo == "m" || sexo == "f" || sexo == "M" || sexo == "F")
             this.sexo = sexo;
         else
             this.sexo = "Não desejo informar!";

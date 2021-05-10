@@ -34,10 +34,4 @@ public class ClienteUsuario extends Cliente {
 		this.cpfFiador = cpfFiador;
 	}
 	
-	
-	
-	
-	
-	
-	
 }

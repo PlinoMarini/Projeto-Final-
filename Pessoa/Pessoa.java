@@ -38,11 +38,11 @@ public class Pessoa {
     }
 
     public boolean setCpf(String cpf) {
-    	int d[] = new int[13];
+    	int d[] = new int[12];
     	
     	int j = 0;
 		// Converte todos os chars de CPF para inteiros no array d, cada posição sendo um dígito do CPF
-    	for(int i = 1; (i < 13 &&  j  < 14); i++, j++) {
+    	for(int i = 1; (i < 12 &&  j  < 14); i++, j++) {
     		if(cpf.charAt(j) >= 48 && cpf.charAt(j) <= 57) {
     			d[i] = Character.getNumericValue(cpf.charAt(j));
     		}
@@ -50,6 +50,19 @@ public class Pessoa {
     			i--;
     		}
     	}
+    	
+    	// Primeiro, verifíca se todos os dígitos são iguais, que é um caso de CPF inválido, mas que passaria nos outros testes
+    	
+    	int iguais = 1;
+    	
+    	for(int i = 2; i < 12; i++) {
+    		if(d[i] != d[i-1]) {
+    			iguais = 0;
+    		}
+    	}
+    	
+    	if(iguais == 1)
+    		return false;
     	
     	int l = 0;
     	
@@ -103,7 +116,7 @@ public class Pessoa {
     }
 
     public void setSexo(String sexo) {
-        if(sexo == "m" || sexo == "f")
+        if(sexo == "m" || sexo == "f" || sexo == "M" || sexo == "F")
             this.sexo = sexo;
         else
             this.sexo = "NÃ£o desejo informar!";

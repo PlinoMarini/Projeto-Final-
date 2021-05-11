@@ -29,7 +29,6 @@ public class Cliente extends Pessoa {
 			return true;
 		}
 		else {
-			this.estadoCivil = 'u';
 			return false;
 		}
 	}
@@ -46,7 +45,6 @@ public class Cliente extends Pessoa {
 			return true;
 		}
 		else {
-			this.profissao = "undefined";
 			return false;
 		}
 	}

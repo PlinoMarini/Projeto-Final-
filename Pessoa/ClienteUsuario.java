@@ -20,7 +20,6 @@ public class ClienteUsuario extends Cliente {
 			return true;
 		}
 		else {
-			this.nomeFiador = "";
 			return false;
 		}
 		
@@ -30,8 +29,13 @@ public class ClienteUsuario extends Cliente {
 		return cpfFiador;
 	}
 
-	public void setCpfFiador(String cpfFiador) {
-		this.cpfFiador = cpfFiador;
+	public boolean setCpfFiador(String cpfFiador) {
+		if(Pessoa.verificaCpf(cpfFiador)) {
+			this.cpfFiador = cpfFiador;
+			return true;
+		}
+		else
+			return false;
 	}
 	
 }

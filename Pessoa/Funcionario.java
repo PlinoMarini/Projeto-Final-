@@ -4,9 +4,8 @@ public class Funcionario extends Pessoa{
     private static double salario_base;
     private Usuario user;
 
-    public Funcionario (String nome, String cpf, String sexo, String email, String telefone, String data_ingresso, double salario_base, Usuario user){
+    public Funcionario (String nome, String cpf, String sexo, String email, String telefone, String data_ingresso, double salario_base){
 	    super(nome, cpf, sexo, email, telefone);
-	    setUser(user);
 	    setData_ingresso(data_ingresso); 
 	    setSalario_base(salario_base); 
     
@@ -51,12 +50,16 @@ public class Funcionario extends Pessoa{
         return salario_base;
     }
 
-    public void setSalario_base(double salario_base) {
-        if(salario_base > 0 )
-            Funcionario.salario_base = salario_base;
-        else
-            Funcionario.salario_base = 0.0; 
+    public boolean setSalario_base(double salario_base) {
+        if(salario_base >= 0 ) {
+        	Funcionario.salario_base = salario_base;
+        	return true;
+        }
+        else {
+        	return false;
+        }
     }
     
     //oi
+    //r: olá
 }

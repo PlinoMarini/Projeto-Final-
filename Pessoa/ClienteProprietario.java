@@ -12,8 +12,14 @@ public class ClienteProprietario extends Cliente {
 		return dataCadastroImovel;
 	}
 
-	public void setDataCadastroImovel(String dataCadastroImovel) {
-		this.dataCadastroImovel = dataCadastroImovel;
+	
+	public boolean setDataCadastroImovel(String dataCadastroImovel) {
+		if(dataCadastroImovel.length() == 10) {
+			this.dataCadastroImovel = dataCadastroImovel;
+			return true;
+		}
+		else
+			return false;
 	}
 	
 }

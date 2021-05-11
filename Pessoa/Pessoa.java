@@ -25,19 +25,21 @@ public class Pessoa {
         return nome;
     }
 
-    public void setNome(String nome) {
-        if(nome.length() > 0)
-            this.nome = nome;
+    public boolean setNome(String nome) {
+        if(nome.length() > 0) {
+        	this.nome = nome;
+        	return true;
+        }
         else
-            this.nome = "";
+            return false;
     }
 
     //127.869.988-10
     public String getCpf() {
         return cpf;
     }
-
-    public boolean setCpf(String cpf) {
+    
+    public static boolean verificaCpf(String cpf) {
     	int d[] = new int[12];
     	
     	int j = 0;
@@ -111,6 +113,18 @@ public class Pessoa {
     	return true;
     }
 
+    public boolean setCpf(String cpf) {
+    	if(verificaCpf(cpf)) {
+    		this.cpf = cpf;
+    		return true;
+    	}
+    	else {
+    		return false;
+    	}
+    	
+    	
+    }
+
     public String getSexo() {
         return sexo;
     }
@@ -119,15 +133,21 @@ public class Pessoa {
         if(sexo == "m" || sexo == "f" || sexo == "M" || sexo == "F")
             this.sexo = sexo;
         else
-            this.sexo = "NÃ£o desejo informar!";
+            this.sexo = "Não desejo informar!";
     }
 
     public String getEmail() {
         return email;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public boolean setEmail(String email) {
+    	if(email.length() > 0) {    		
+    		this.email = email;
+    		return true;
+    	}
+    	else
+    		return false;
+    	
     }
 
     public String getTelefone() {
@@ -135,14 +155,13 @@ public class Pessoa {
     }
 
     //34988588461
-    public void setTelefone(String telefone) {
-        if(telefone.length() < 11 || telefone.length() > 11)
-            this.telefone = "";
+    public boolean setTelefone(String telefone) {
+        if(telefone.length() == 11) {
+        	this.telefone = telefone;
+        	return true;
+        }
         else
-            this.telefone = telefone; 
+        	return false;
     }
 
-    
-
-     
 }//end Pessoa

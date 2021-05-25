@@ -43,7 +43,7 @@ public class Funcionario extends Pessoa{
         if(data_ingresso.length() == 8)
             this.data_ingresso = data_ingresso;
         else 
-            this.data_ingresso = "Data Inválida!"; 
+            this.data_ingresso = "Data Invï¿½lida!"; 
     }
 
     public static double getSalario_base() {
@@ -61,5 +61,5 @@ public class Funcionario extends Pessoa{
     }
     
     //oi
-    //r: olá
+    //r: olï¿½
 }

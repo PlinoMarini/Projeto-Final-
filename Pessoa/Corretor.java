@@ -5,9 +5,10 @@ public class Corretor extends Funcionario {
 	private double salario;
 	private double vendasMes;
 	private ArrayList<String> cursos = new ArrayList<String>();
+	private String dataInicio; 
 	
 	public Corretor(String nome, String cpf, String sexo, String email, String telefone, String data_ingresso,
-			double salario_base) { // N„o precisa receber cursos ainda
+			double salario_base) { // NÔøΩo precisa receber cursos ainda
 		super(nome, cpf, sexo, email, telefone, data_ingresso, salario_base);
 	}
 
@@ -20,7 +21,7 @@ public class Corretor extends Funcionario {
 			return true;
 		}
 		else 
-			return false	;		//N„o tem essa String (curso) em cursos 
+			return false	;		//NÔøΩo tem essa String (curso) em cursos 
 		
 	}
 	
@@ -68,5 +69,17 @@ public class Corretor extends Funcionario {
 		salario = super.calculaSalario() + (vendasMes * porcentagemComissao);
 		return salario;
 	}
+
+	public String getDataInicio() {
+        return dataInicio;
+    }
+
+    //  10/10/21 -> 8 posicoes de array
+    public void setDataInicio(String dataInicio) {
+        if(dataInicio.length() == 8)
+            this.dataInicio = dataInicio;
+        else 
+            this.dataInicio = "Data Inv√°lida!"; 
+    }
 
 }

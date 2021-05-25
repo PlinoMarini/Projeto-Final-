@@ -1,8 +1,5 @@
 import java.io.Serializable;
-/**
- * @author plinio, luanna, guilherme
- *
- */
+
 public abstract class Imovel2 implements Serializable{
 	private String id; 
 	protected byte status;
@@ -22,7 +19,7 @@ public abstract class Imovel2 implements Serializable{
 			this.id = id;
 		}
 		else 
-			this.id = "Valor inválido!"; 
+			this.id = "Valor invï¿½lido!"; 
 	}
 	public byte getStatus() {
 		return status;
@@ -30,7 +27,7 @@ public abstract class Imovel2 implements Serializable{
 	
 	/**
 	 * 
-	 * @param status == 1 -> imóvel disponível / status == 2 -> imóvel indsiponível / status == 3 -> imóvel vendido ou alugado
+	 * @param status == 1 -> imï¿½vel disponï¿½vel / status == 2 -> imï¿½vel indsiponï¿½vel / status == 3 -> imï¿½vel vendido ou alugado
 	 * @return false se valor diferente de (1,2 ou 3) / true se for igual
 	 */
 	public boolean setStatus(byte status) {
@@ -48,7 +45,7 @@ public abstract class Imovel2 implements Serializable{
 	
 	/**
 	 * 
-	 * @param alug_venda == 1 -> imóvel para aluguel / alug_venda == 2 -> imóvel para venda
+	 * @param alug_venda == 1 -> imï¿½vel para aluguel / alug_venda == 2 -> imï¿½vel para venda
 	 * @return false se valor for diferente de (1 ou 2) / true se o valor for igual 
 	 */
 	public boolean setAlug_venda(byte alug_venda) {
@@ -65,7 +62,7 @@ public abstract class Imovel2 implements Serializable{
 	}
 	
 	/**
-	 * Para que o valor seja alterado ou inicado o imóvel deve ser voltado para aluguel e estar disponível
+	 * Para que o valor seja alterado ou inicado o imï¿½vel deve ser voltado para aluguel e estar disponï¿½vel
 	 */
 	public void setValor_aluguel(double valor_aluguel) {
 		if(status != 2 && alug_venda == 1 && valor_aluguel > 0 ) {
@@ -111,9 +108,9 @@ public abstract class Imovel2 implements Serializable{
 	} 
 	
 	/**
-	 * Se o imóvel for destinado à venda, o valor deve representar 6% do valor da venda. Caso o imóvel seja
+	 * Se o imï¿½vel for destinado ï¿½ venda, o valor deve representar 6% do valor da venda. Caso o imï¿½vel seja
 	 * para aluguel, o valor deve ser 8% do valor de aluguel.
-	 * @return o valor total a ser recebido pela imobiliária 
+	 * @return o valor total a ser recebido pela imobiliï¿½ria 
 	 */
 	public double valor_imobiliaria() {
 		if(status != 2 && alug_venda == 1 && valor_aluguel > 0) {

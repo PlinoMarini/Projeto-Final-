@@ -3,10 +3,10 @@ public class Endereco {
 	private String rua; 
 	private String bairro; 
 	private String cidade; 
-	private int cep; 
+	private String cep; 
 	private String complemento;
 	
-	public Endereco(String rua, String bairro, String cidade, int cep, String complemento) {
+	public Endereco(String rua, String bairro, String cidade, String cep, String complemento) {
 		setRua(rua); 
 		setBairro(bairro); 
 		setCidade(cidade); 
@@ -20,7 +20,7 @@ public class Endereco {
 
 	public void setRua(String rua) {
 		if(rua.length() <= 0)
-			this.rua = "Rua inválida!";
+			this.rua = "Rua invï¿½lida!";
 		else
 			this.rua = rua; 
 	}
@@ -33,7 +33,7 @@ public class Endereco {
 		if(bairro.length() > 0)
 			this.bairro = bairro;
 		else 
-			this.bairro = "Bairro inválido!"; 
+			this.bairro = "Bairro invï¿½lido!"; 
 	}
 
 	public String getCidade() {
@@ -44,18 +44,18 @@ public class Endereco {
 		if(cidade.length() > 0)
 			this.cidade = cidade;
 		else
-			this.cidade = "Cidade inválida!"; 
+			this.cidade = "Cidade invï¿½lida!"; 
 	}
 
-	public int getCep() {
+	public String getCep() {
 		return cep;
 	}
 
-	public void setCep(int cep) {
-		if(cep <= 0 || cep > 8)
-			this.cep = 0;
+	public void setCep(String cep) {
+		if(cep.length() == 8)
+			this.cep = cep;
 		else 
-			this.cep = cep; 
+			this.cep = "Este CEP Ã© invÃ¡lido"; 
 	}
 
 	public String getComplemento() {
@@ -64,10 +64,10 @@ public class Endereco {
 
 	public void setComplemento(String complemento) {
 		if(complemento.length() < 0)
-			this.complemento = "Complemento inválido!";
+			this.complemento = "Complemento invï¿½lido!";
 		else 
 			this.complemento = complemento; 
 	}
 	
 	
-}//------------- end Endereço ---------------//
+}//------------- end Endereï¿½o ---------------//

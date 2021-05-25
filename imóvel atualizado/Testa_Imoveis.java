@@ -2,7 +2,7 @@
 public class Testa_Imoveis {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+
 		
 		Imovel [] c = new Imovel [2]; 
 		

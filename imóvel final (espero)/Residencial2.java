@@ -1,11 +1,3 @@
-/**
- * 
- */
-
-/**
- * @author plini
- *
- */
 public abstract class Residencial2 extends Imovel2 {
 	protected int quartos; 
 	private int banheiros; 
@@ -102,7 +94,7 @@ public abstract class Residencial2 extends Imovel2 {
 			this.descricao = descricao;
 		}
 		else
-			this.descricao = "Inválido!"; 
+			this.descricao = "Invï¿½lido!"; 
 	}
 	
 	public byte getPiscina() {
@@ -111,7 +103,7 @@ public abstract class Residencial2 extends Imovel2 {
 	
 	/**
 	 * 
-	 * @param piscina == 1 -> Há piscinas / piscina == 2 -> Não há piscina 
+	 * @param piscina == 1 -> Hï¿½ piscinas / piscina == 2 -> Nï¿½o hï¿½ piscina 
 	 */
 	public void setPiscina(byte piscina) {
 		if((piscina == 1 || piscina == 2) && status != 2) {

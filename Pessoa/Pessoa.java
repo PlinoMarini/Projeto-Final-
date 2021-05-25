@@ -1,5 +1,6 @@
+import java.io.Serializable;
 
-public class Pessoa {
+public class Pessoa implements Serializable{
     private String nome; 
     private String cpf; 
     private String sexo; 
@@ -43,7 +44,7 @@ public class Pessoa {
     	int d[] = new int[12];
     	
     	int j = 0;
-		// Converte todos os chars de CPF para inteiros no array d, cada posição sendo um dígito do CPF
+		// Converte todos os chars de CPF para inteiros no array d, cada posiï¿½ï¿½o sendo um dï¿½gito do CPF
     	for(int i = 1; (i < 12 &&  j  < 14); i++, j++) {
     		if(cpf.charAt(j) >= 48 && cpf.charAt(j) <= 57) {
     			d[i] = Character.getNumericValue(cpf.charAt(j));
@@ -53,7 +54,7 @@ public class Pessoa {
     		}
     	}
     	
-    	// Primeiro, verifíca se todos os dígitos são iguais, que é um caso de CPF inválido, mas que passaria nos outros testes
+    	// Primeiro, verifï¿½ca se todos os dï¿½gitos sï¿½o iguais, que ï¿½ um caso de CPF invï¿½lido, mas que passaria nos outros testes
     	
     	int iguais = 1;
     	
@@ -78,7 +79,7 @@ public class Pessoa {
     	
     	if(resto == 0 || resto == 1) {
     		if(d[10] != 0) {
-    			return false; // não é um CPF válido
+    			return false; // nï¿½o ï¿½ um CPF vï¿½lido
     		}
     	}
     	else {
@@ -86,9 +87,9 @@ public class Pessoa {
     			return false;
     		}
     	}
-    	// caso chegou até aqui, passou no teste do primeiro digito verificador
+    	// caso chegou atï¿½ aqui, passou no teste do primeiro digito verificador
     	
-    	// Agora, será feito o teste para o segundo dígito verificador
+    	// Agora, serï¿½ feito o teste para o segundo dï¿½gito verificador
     	
     	j = 10;
     	l = 0;
@@ -102,7 +103,7 @@ public class Pessoa {
     	
     	if(resto == 0 || resto == 1) {
     		if(d[11] != 0) {
-    			return false; // não é um CPF válido
+    			return false; // nï¿½o ï¿½ um CPF vï¿½lido
     		}
     	}
     	else {
@@ -133,7 +134,7 @@ public class Pessoa {
         if(sexo == "m" || sexo == "f" || sexo == "M" || sexo == "F")
             this.sexo = sexo;
         else
-            this.sexo = "Não desejo informar!";
+            this.sexo = "Nï¿½o desejo informar!";
     }
 
     public String getEmail() {

@@ -14,7 +14,7 @@ public class Apart2 extends Residencial2 {
 
 	@Override
 	/**
-	 * @param quanto menor o valor de índice, melhor e mais fácil será a venda ou aluguel do apartamento
+	 * @param quanto menor o valor de ï¿½ndice, melhor e mais fï¿½cil serï¿½ a venda ou aluguel do apartamento, a proporÃ§Ã£o Ã© medida atravÃ©s da quantidade de cÃ´modos em relaÃ§Ã£o ao valor do aluguel ou venda. Ou seja, se o local tiver muitos quartos e o aluguel for baixo este serÃ¡ considerado mais fÃ¡cil de alugar ou vender. 
 	 */
 	public void calculaIndiceVendaLocacao() {
 		if(status != 2 && alug_venda == 1) {
@@ -46,7 +46,7 @@ public class Apart2 extends Residencial2 {
 	
 	/**
 	 * 
-	 * @param portaria == 1 -> Há portaria / portaria == 2 -> Não há portaria 
+	 * @param portaria == 1 -> Hï¿½ portaria / portaria == 2 -> Nï¿½o hï¿½ portaria 
 	 * @return
 	 */
 	public boolean setPortaria(byte portaria) {

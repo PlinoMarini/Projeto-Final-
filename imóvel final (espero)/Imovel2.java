@@ -1,9 +1,9 @@
-
+import java.io.Serializable;
 /**
- * @author plini
+ * @author plinio, luanna, guilherme
  *
  */
-public abstract class Imovel2 {
+public abstract class Imovel2 implements Serializable{
 	private String id; 
 	protected byte status;
 	protected byte alug_venda;  

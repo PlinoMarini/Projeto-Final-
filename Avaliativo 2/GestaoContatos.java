@@ -258,6 +258,7 @@ public class GestaoContatos {
 				escritor = new BufferedWriter(new FileWriter(new File("familia")));
 				for(Contato ctt : Familia){
 					escritor.write(ctt.toString());
+					System.out.println();
 				}
 				escritor.flush();
 				escritor.close();
@@ -272,6 +273,7 @@ public class GestaoContatos {
 				escritor = new BufferedWriter(new FileWriter(new File("amigos")));
 				for(Contato ctt : Amigos){
 					escritor.write(ctt.toString());
+					System.out.println();
 				}
 				escritor.flush();
 				escritor.close();
@@ -286,6 +288,7 @@ public class GestaoContatos {
 				escritor = new BufferedWriter(new FileWriter(new File("profissional")));
 				for(Contato ctt : Profissional){
 					escritor.write(ctt.toString());
+					System.out.println();
 				}
 				escritor.flush();
 				escritor.close();
@@ -307,7 +310,7 @@ public class GestaoContatos {
 				escritorArq = new FileOutputStream("familiabin");
 				escritorObj = new ObjectOutputStream(escritorArq);
 				
-	
+				escritorObj.writeObject((Integer)Familia.size()); 
 				escritorObj.writeObject(Familia);
 				
 			} catch (FileNotFoundException e) {
@@ -329,7 +332,7 @@ public class GestaoContatos {
 				escritorArq = new FileOutputStream("amigosbin");
 				escritorObj = new ObjectOutputStream(escritorArq);
 				
-	
+				escritorObj.writeObject((Integer)Amigos.size()); 
 				escritorObj.writeObject(Amigos);
 				
 			} catch (FileNotFoundException e) {
@@ -350,7 +353,7 @@ public class GestaoContatos {
 				escritorArq = new FileOutputStream("profissionalbin");
 				escritorObj = new ObjectOutputStream(escritorArq);
 				
-	
+				escritorObj.writeObject((Integer)Profissional.size()); 
 				escritorObj.writeObject(Profissional);
 				
 			} catch (FileNotFoundException e) {

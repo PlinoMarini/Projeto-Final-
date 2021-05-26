@@ -53,6 +53,7 @@ class DadosTransacao{
 				escritor = new BufferedWriter(new FileWriter(new File("transacao"))); 
 				for(Transacao trans : vetTrans) {
 					escritor.write(trans.toString());
+					System.out.println();
 				}
 				escritor.flush();
 				escritor.close();
@@ -71,7 +72,8 @@ class DadosTransacao{
 		if(!vetTrans.isEmpty()) {
 			try {
 				escritorArq = new FileOutputStream("transacaobin"); 
-				escritorObj = new ObjectOutputStream(escritorObj); 
+				escritorObj = new ObjectOutputStream(escritorObj);
+				escritorObj.writeObject((Integer)vetTrans.size()); 
 				escritorObj.writeObject(vetTrans);
 			}
 			catch(FileNotFoundException e) {

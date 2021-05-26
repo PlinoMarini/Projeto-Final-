@@ -1,5 +1,6 @@
+import java.io.Serializable;
 
-public abstract class Imovel2{
+public abstract class Imovel2 implements Serializable{
 	private String id; 
 	protected byte status;
 	protected byte alug_venda;  

@@ -9,16 +9,18 @@ public class Comercial2 extends Imovel2{
 		this.banheiros = banheiros;
 	}
 	
-	@Override
 	/**
-	 * @param quanto menor o valor de �ndice, melhor e mais f�cil ser� a venda ou aluguel da sala comercial 
+	 * O indice e calculado a partir dos valores contrastantes 
+	 * do numero de comodos, area construida, e o valor do aluguel ou venda. 
+	 * Logo, caso o imovel tenha muitos comodos, piscina e etc e seu valor for baixo, mais facil sera a compra ou o aluguel
+	 * Para SALAS COMERCIAIS, o valor do indice tera um multiplicador (3x) para se diferenciar dos demais imoveis
 	 */
 	public void calculaIndiceVendaLocacao() {
 		if(status != 2 && alug_venda == 1) {
-			indice = (((comodos + banheiros + area) - valor_aluguel)  / (1000 * 0.8))+3; 
+			indice = (((comodos + banheiros + area) - valor_aluguel)*(-1))*3 ; 
 		}
 		else if (status != 2 && alug_venda == 2){
-			indice = (((comodos + banheiros + area) - valor_venda)  / (1000 * 0.6))+3;
+			indice = (((comodos + banheiros + area) - valor_venda) / 1000)*3; 
 		}
 		else 
 			indice = 0; 

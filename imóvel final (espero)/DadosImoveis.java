@@ -6,15 +6,14 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
-import java.util.Locale;
-import java.io.Serializable;
+
 
 public class DadosImoveis {
 	private ArrayList<Imovel2> Imoveis = new ArrayList<Imovel2>();
 
 	// ----------- add ------------//
 	public void add(Imovel2 imv) {
-		this.Terreno.add(imv); 
+		this.Imoveis.add(imv); 
 
 		System.out.println("Total de im�veis inseridos: ");
 		System.out.println("Im�veis: " + this.Imoveis.size());

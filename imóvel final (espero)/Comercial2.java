@@ -1,17 +1,14 @@
-import java.io.Serializable;
+
 public class Comercial2 extends Imovel2{
 	protected int comodos; 
 	protected int banheiros; 
 	
-	
-	
-	public Comercial2(int comodos, int banheiros) {
-		super();
-		setComodos(comodos);
-		setBanheiros(banheiros);
+	public Comercial2(ClienteProprietario cp, int comodos, int banheiros) {
+		super(cp);
+		this.comodos = comodos;
+		this.banheiros = banheiros;
 	}
-
-
+	
 	@Override
 	/**
 	 * @param quanto menor o valor de �ndice, melhor e mais f�cil ser� a venda ou aluguel da sala comercial 
@@ -55,6 +52,4 @@ public class Comercial2 extends Imovel2{
 		else
 			this.banheiros = 0; 
 	}
-	
-	
 }

@@ -1,6 +1,5 @@
-import java.io.Serializable;
 
-public abstract class Imovel2 implements Serializable{
+public abstract class Imovel2{
 	private String id; 
 	protected byte status;
 	protected byte alug_venda;  
@@ -12,11 +11,14 @@ public abstract class Imovel2 implements Serializable{
 	private Endereco end; 
 	private ClienteProprietario cp; 
 	
+	
 	public Imovel2(ClienteProprietario cp) {
 		this.cp = cp;
 	}
-
-
+	public Imovel2() {
+		
+	}
+	
 	public String getId() {
 		return id;
 	}
@@ -25,7 +27,7 @@ public abstract class Imovel2 implements Serializable{
 			this.id = id;
 		}
 		else 
-			this.id = "Valor inv�lido!"; 
+			this.id = "Valor invalido!"; 
 	}
 	public byte getStatus() {
 		return status;
@@ -33,7 +35,7 @@ public abstract class Imovel2 implements Serializable{
 	
 	/**
 	 * 
-	 * @param status == 1 -> im�vel dispon�vel / status == 2 -> im�vel indsipon�vel / status == 3 -> im�vel vendido ou alugado
+	 * @param status == 1 -> imovel disponivel / status == 2 -> im�vel indsipon�vel / status == 3 -> im�vel vendido ou alugado
 	 * @return false se valor diferente de (1,2 ou 3) / true se for igual
 	 */
 	public boolean setStatus(byte status) {
@@ -51,7 +53,7 @@ public abstract class Imovel2 implements Serializable{
 	
 	/**
 	 * 
-	 * @param alug_venda == 1 -> im�vel para aluguel / alug_venda == 2 -> im�vel para venda
+	 * @param alug_venda == 1 -> imovel para aluguel / alug_venda == 2 -> imovel para venda
 	 * @return false se valor for diferente de (1 ou 2) / true se o valor for igual 
 	 */
 	public boolean setAlug_venda(byte alug_venda) {
@@ -114,7 +116,7 @@ public abstract class Imovel2 implements Serializable{
 	} 
 	
 	/**
-	 * Se o im�vel for destinado � venda, o valor deve representar 6% do valor da venda. Caso o im�vel seja
+	 * Se o imovel for destinado a venda, o valor deve representar 6% do valor da venda. Caso o imovel seja
 	 * para aluguel, o valor deve ser 8% do valor de aluguel.
 	 * @return o valor total a ser recebido pela imobili�ria 
 	 */

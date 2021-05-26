@@ -1,14 +1,14 @@
-import java.io.Serializable;
+
 public class Terreno2 extends Imovel2 {
 	private double largura; 
 	private double comprimento; 
 	
-	public Terreno2(double largura, double comprimento) {
-		super();
+	public Terreno2(ClienteProprietario cp, double largura, double comprimento) {
+		super(cp);
 		setLargura(largura);
 		setComprimento(comprimento);
 	}
-	
+
 	public double getLargura() {
 		return largura;
 	}
@@ -34,9 +34,13 @@ public class Terreno2 extends Imovel2 {
 	}
 
 	@Override
+	/**
+	 * O índice e calculado a partir do tamanho (LARGURA E COMPRIMENTRO) do terreno em contraste com o valor do terreno. 
+	 * Sendo assim, quanto menor o valor de venda em comparacao com o tamanho do terreno melhor para a venda do mesmo. 
+	 */
 	public void calculaIndiceVendaLocacao() {
 		if(status != 2) {
-			indice = ((comprimento + largura) - valor_venda)/1000*0.6; 
+			indice = ((comprimento + largura) - valor_venda) / 1000; 
 		}		
 	}
 

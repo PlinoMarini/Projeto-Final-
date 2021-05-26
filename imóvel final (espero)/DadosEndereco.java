@@ -6,15 +6,14 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
-import java.util.Locale;
-import java.io.Serializable;
+
 
 public class DadosEndereco {
     private ArrayList<Endereco> enderecos = new ArrayList<Endereco>(); 
 
     // ----------- add ------------//
     public void add(Endereco end){
-        this.Pessoas.add(end); 
+        this.enderecos.add(end); 
 
         System.out.println("Endereços Cadastrados: ");
         System.out.println(this.enderecos.size());
@@ -25,7 +24,7 @@ public class DadosEndereco {
     public Endereco busca(String cep){
         Endereco e = null;
         for(Endereco end : this.enderecos){
-            if(end.getNome().equals(cep)){
+            if(end.getCep().equals(cep)){
                 e = end; 
             }
         } 
@@ -37,7 +36,7 @@ public class DadosEndereco {
     public boolean exclui(String cep){
         Endereco end = busca(cep); 
         if(end != null){
-            this.enderecos.remove(plp);
+            this.enderecos.remove(end);
             return true; 
         }
         System.out.println("Endereço não encontrado!");

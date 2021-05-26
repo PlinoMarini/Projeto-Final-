@@ -1,4 +1,4 @@
-import java.io.Serializable;
+
 public abstract class Residencial2 extends Imovel2 {
 	protected int quartos; 
 	private int banheiros; 
@@ -9,6 +9,20 @@ public abstract class Residencial2 extends Imovel2 {
 	private int armarios; 
 	private String descricao; 
 	protected byte piscina;
+	
+	public Residencial2(ClienteProprietario cp, int quartos, int banheiros, int suite, int sala_estar, int sala_jantar,
+			int vagas_garagem, int armarios, String descricao, byte piscina) {
+		super(cp);
+		this.quartos = quartos;
+		this.banheiros = banheiros;
+		this.suite = suite;
+		this.sala_estar = sala_estar;
+		this.sala_jantar = sala_jantar;
+		this.vagas_garagem = vagas_garagem;
+		this.armarios = armarios;
+		this.descricao = descricao;
+		this.piscina = piscina;
+	}
 	
 	public int getQuartos() {
 		return quartos;
@@ -95,7 +109,7 @@ public abstract class Residencial2 extends Imovel2 {
 			this.descricao = descricao;
 		}
 		else
-			this.descricao = "Inv�lido!"; 
+			this.descricao = "Invalido!"; 
 	}
 	
 	public byte getPiscina() {
@@ -104,7 +118,7 @@ public abstract class Residencial2 extends Imovel2 {
 	
 	/**
 	 * 
-	 * @param piscina == 1 -> H� piscinas / piscina == 2 -> N�o h� piscina 
+	 * @param piscina == 1 -> Ha piscinas / piscina == 2 -> Nao ha piscina 
 	 */
 	public void setPiscina(byte piscina) {
 		if((piscina == 1 || piscina == 2) && status != 2) {

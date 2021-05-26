@@ -35,23 +35,6 @@ public class GestaoContatos {
 		System.out.println(this.Familia.size());
 	}
 	
-	// public void addFamilia(Contato a) {
-	// 	this.Familia.add(a); 		//adiciona a pessoa no array Fam�lia
-	// 	System.out.println("Total de pessoas inseridas: "); 		//verifica quantas pessoas foram inseridas no ArrayList
-	// 	System.out.println(this.Familia.size());
-	// }
-	
-	// public void addAmigos(Contato b) {
-	// 	this.Amigos.add(b); 		//adiciona a pessoa no array Amigos
-	// 	System.out.println("Total de pessoas inseridas: "); 		//verifica quantas pessoas foram inseridas no ArrayList
-	// 	System.out.println(this.Amigos.size());
-	// }
-	
-	// public void addProfissional(Contato c) {
-	// 	this.Amigos.add(c);			//adiciona a pessoa no array Profissional 
-	// 	System.out.println("Total de pessoas inseridas: "); 		//verifica quantas pessoas foram inseridas no ArrayList
-	// 	System.out.println(this.Profissional.size());
-	// }
 	
 	//---------------------------- add------------------------------//
 	
@@ -115,41 +98,6 @@ public class GestaoContatos {
 	}
 
 	
-	// public boolean excFamilia(String nome) {
-	// 	Contato a = buscaFamilia(nome); 
-	// 	if(a != null) {
-	// 		this.Familia.remove(a);
-	// 		return true;
-	// 	}
-	// 	else {
-	// 		System.out.println("Contato n�o encontrado!");
-	// 		return false;
-	// 	}
-	// }
-	
-	// public boolean excAmigo(String nome) {
-	// 	Contato b = buscaAmigo(nome); 
-	// 	if(b != null) {
-	// 		this.Amigos.remove(b);
-	// 		return true;
-	// 	}
-	// 	else {
-	// 		System.out.println("Contato n�o encontrado!");
-	// 		return false;
-	// 	}
-	// }
-	
-	// public boolean excProfissional(String nome) {
-	// 	Contato c = buscaProfissional(nome); 
-	// 	if(c != null) {
-	// 		this.Profissional.remove(c);
-	// 		return true;
-	// 	}
-	// 	else {
-	// 		System.out.println("Contato n�o encontrado!");
-	// 		return false;
-	// 	}
-	// }
 	
 	//----------------------------Excluir------------------------------//
 

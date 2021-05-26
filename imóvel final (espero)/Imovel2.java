@@ -10,7 +10,13 @@ public abstract class Imovel2 implements Serializable{
 	protected double area;
 	protected double indice; 
 	private Endereco end; 
+	private ClienteProprietario cp; 
 	
+	public Imovel2(ClienteProprietario cp) {
+		this.cp = cp;
+	}
+
+
 	public String getId() {
 		return id;
 	}
@@ -134,5 +140,12 @@ public abstract class Imovel2 implements Serializable{
 		this.end = end;
 	} 
 	
+	public ClienteProprietario getCp(){
+		return cp; 
+	}
+
+	public void setCp(ClienteProprietario cp){
+		this.cp = cp; 
+	}
 	
 }//-------------end---------------// 

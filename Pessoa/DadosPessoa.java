@@ -54,6 +54,7 @@ public class DadosPessoa {
 				escritor = new BufferedWriter(new FileWriter(new File("pessoas"))); 
 				for(Pessoa plp : Pessoas) {
 					escritor.write(plp.toString());
+					System.out.println();
 				}
 				escritor.flush();
 				escritor.close();
@@ -72,7 +73,8 @@ public class DadosPessoa {
 		if(!Pessoas.isEmpty()) {
 			try {
 				escritorArq = new FileOutputStream("pessoasbin"); 
-				escritorObj = new ObjectOutputStream(escritorObj); 
+				escritorObj = new ObjectOutputStream(escritorObj);
+				escritorObj.writeObject((Integer)Pessoas.size()); 
 				escritorObj.writeObject(Pessoas);
 			}
 			catch(FileNotFoundException e) {

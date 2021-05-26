@@ -56,6 +56,7 @@ public class DadosImoveis {
 				escritor = new BufferedWriter(new FileWriter(new File("imoveis"))); 
 				for(Imovel2 imv : Imoveis) {
 					escritor.write(imv.toString());
+					System.out.println();
 				}
 				escritor.flush();
 				escritor.close();
@@ -75,7 +76,8 @@ public class DadosImoveis {
 		if(!Imoveis.isEmpty()) {
 			try {
 				escritorArq = new FileOutputStream("imoveisbin"); 
-				escritorObj = new ObjectOutputStream(escritorObj); 
+				escritorObj = new ObjectOutputStream(escritorObj);
+				escritorObj.writeObject((Integer)Imoveis.size()); 
 				escritorObj.writeObject(Imoveis);
 			}
 			catch(FileNotFoundException e) {

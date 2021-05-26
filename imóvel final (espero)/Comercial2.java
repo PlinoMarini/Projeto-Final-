@@ -1,4 +1,4 @@
-
+import java.io.Serializable;
 public class Comercial2 extends Imovel2{
 	protected int comodos; 
 	protected int banheiros; 
@@ -14,7 +14,7 @@ public class Comercial2 extends Imovel2{
 
 	@Override
 	/**
-	 * @param quanto menor o valor de índice, melhor e mais fácil será a venda ou aluguel da sala comercial 
+	 * @param quanto menor o valor de ï¿½ndice, melhor e mais fï¿½cil serï¿½ a venda ou aluguel da sala comercial 
 	 */
 	public void calculaIndiceVendaLocacao() {
 		if(status != 2 && alug_venda == 1) {

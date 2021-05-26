@@ -3,7 +3,7 @@ public class Casa2 extends Residencial2 {
 	
 	@Override
 	/**
-	 * quanto menor o valor de índice, melhor e mais fácil será a venda ou aluguel da casa
+	 * quanto menor o valor de ï¿½ndice, melhor e mais fï¿½cil serï¿½ a venda ou aluguel da casa
 	 */
 	public void calculaIndiceVendaLocacao() {
 		

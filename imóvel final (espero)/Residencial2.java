@@ -1,3 +1,4 @@
+import java.io.Serializable;
 public abstract class Residencial2 extends Imovel2 {
 	protected int quartos; 
 	private int banheiros; 

@@ -1,4 +1,4 @@
-
+import java.io.Serializable;
 public class Terreno2 extends Imovel2 {
 	private double largura; 
 	private double comprimento; 
